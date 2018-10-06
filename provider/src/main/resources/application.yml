@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: dubbo-provider
+server:
+  port: 9090
+dubbo:
+  registry:
+    address: 127.0.0.1:2181
+    id: zach-registry
+    protocol: zookeeper
+  protocol:
+    port: 12345
+    name: dubbo
+    id: dubbo
+    status: server
+  application:
+    version: v1.0.0
+    name: dubbo-provider-name
+    id: dubbo-provider-id
+  scan:
+    basePackages: com.sf.provider.services
